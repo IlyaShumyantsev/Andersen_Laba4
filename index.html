@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Property and Homes Search</title>
+    <style type="text/css">
+        @import url("styles/style.css");
+    </style>
+    <link rel="icon" href="img/favicon.ico" type="image/md.microsoft.icon"/>
+    <script src="js/scriptRequest.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1Mj2zIR3yLj2IqqLnkS3gp2k0_xg4TZA" async defer></script>
+</head>
+<body id="body">
+    <header>
+        <a href="index.html" class="logo"></a>
+        <div class="top-menu">
+            <a id="main">Main</a>
+            <div class="top-menu-line"></div>
+            <a id="favourite">Favourite: 0</a>
+        </div>
+        <div class="search" id="search">
+            <form method="" action="" id="search-form" onsubmit="return false;">
+                <select placeholder="Страна" class="country" id="country">
+                    <option value="co.uk">UK</option>
+                    <option value="es">España</option>
+                    <option value="de">Deutschland</option>
+                    <option value="fr">France</option>
+                    <option value="ch">Chile</option>
+                    <option value="mx">México</option>
+                    <option value="com.br">Brasil</option>
+                    <option value="in">India</option>
+                    <option value="pe">Perú</option>
+                    <option value="au">Australia</option>
+                    <option value="ph">Philippines</option>
+                    <option value="pl">Polska</option>
+                    <option value="at">Österreich</option>
+                    <option value="ae">United Arab Emirates</option>
+                    <option value="it">Italia</option>
+                    <option value="ch">Schweiz</option>
+                    <option value="com.tr">Türkiye</option>
+                    <option value="pt">Portugal</option>
+                </select>
+                <input type="text" name="" value="" id="city" placeholder="City" class="city">
+                <input type="submit" value="Search" id="searchButton">
+            </form>
+        </div>
+    </header>
+    <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+    <label class="btn-menu" for="hmt">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+    </label>
+    <ul class="hidden-menu">
+        <div class="hidden-menu-content">
+            <form method="" action="" id="extra-search-form">
+                <hr>
+                <div class="search-category">
+                    <label class="text-comment">Price low: </label>
+                    <input type="number" id="price_low" name="price_min" value="">
+                </div>
+                <div class="search-category">
+                    <label class="text-comment">Price high: </label>
+                    <input type="number" id="price_high" name="price_max" value="">
+                </div>
+                <hr>
+                <div class="search-category">
+                    <label class="text-comment">Bedroom min: </label>
+                    <input type="number" name="bedroom_min" id="bedroom_number_min" value="" placeholder="0">
+                </div>
+                <div class="search-category">
+                    <label class="text-comment">Bedroom max: </label>
+                    <input type="number" name="bedroom_max" id="bedroom_number_max" value="" placeholder="0">
+                </div>
+                <hr>
+                <div class="search-category">
+                    <label class="text-comment">Room min: </label>
+                    <input type="number" name="room_min" id="room_number_min" value="" placeholder="1">
+                </div>
+                <div class="search-category">
+                    <label class="text-comment">Room max: </label>
+                    <input type="number" name="room_max" id="room_number_max" value="" placeholder="1">
+                </div>
+                <hr>
+                <div class="search-category">
+                    <label class="text-comment">Bathroom min: </label>
+                    <input type="number" name="bathroom_min" id="bathroom_number_min" value="" placeholder="0">
+                </div>
+                <div class="search-category">
+                    <label class="text-comment">Bathroom max: </label>
+                    <input type="number" name="bathroom_max" id="bathroom_number_max" value="" placeholder="0">
+                </div>
+                <hr>
+                <div class="search-category">
+                    <label class="text-comment">Propetry type: </label>
+                    <select id="property_type">
+                        <option value="house">house</option>
+                        <option value="flat">flat</option>
+                        <option value="All" selected="">all</option>
+                    </select>
+                </div>
+                <hr>
+            </form>
+        </div>
+    </ul>
+    <div id="result">
+        <div id="preloader">
+            <div id="preloader_preload"></div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div id="pagination" class="row">
+        <button type="submit" class="pull-left" id="pull-left"><< Back</button>
+        <span class="text" id="page"></span>
+        <button type="submit" class="pull-right" id="pull-right">Next >></button>
+    </div>
+</footer>
+<script src="js/scriptAnswer.js"></script>
+<script src="js/buildPage.js"></script>
+<script src="js/addFavourite.js"></script>
+</html>
